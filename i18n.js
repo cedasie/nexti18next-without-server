@@ -8,9 +8,9 @@ module.exports = new NextI18Next({
   browserLanguageDetection: true,
   serverLanguageDetection: true,
   detection: {
-    lookupCookie: 'next-i18next',
+    lookupCookie: 'language',
     order: ['localStorage', 'cookie', 'navigator', 'path', 'subdomain'],
-    caches: ['cookie'],
+    caches: ['localStorage', 'cookie'],
     excludeCacheFor: ['cimode'],
   },
   keySeparator: false,
