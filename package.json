@@ -4,11 +4,13 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && next export",
     "start": "next start"
   },
   "dependencies": {
+    "i18next": "^19.6.3",
     "next": "9.5.2",
+    "next-i18next": "^6.0.2",
     "react": "16.13.1",
     "react-dom": "16.13.1"
   }
