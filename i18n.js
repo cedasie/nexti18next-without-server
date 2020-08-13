@@ -3,8 +3,9 @@ const { localeSubpaths } = require('next/config').default().publicRuntimeConfig;
 const path = require('path');
 
 module.exports = new NextI18Next({
+  defaultLanguage: 'en',
+  fallbackLng: 'en',
   otherLanguages: ['de'],
-  localeSubpaths,
   browserLanguageDetection: true,
   serverLanguageDetection: true,
   detection: {
@@ -13,5 +14,9 @@ module.exports = new NextI18Next({
     caches: ['cookie'],
     excludeCacheFor: ['cimode'],
   },
+  keySeparator: false,
+
+  localeSubpaths,
+
   localePath: path.resolve('./public/static/locales'),
 });
