@@ -4,7 +4,6 @@ const path = require('path');
 
 module.exports = new NextI18Next({
   defaultLanguage: 'en',
-  fallbackLng: 'en',
   otherLanguages: ['de'],
   browserLanguageDetection: true,
   serverLanguageDetection: true,
