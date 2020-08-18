@@ -3,10 +3,15 @@ const { localeSubpaths } = require('next/config').default().publicRuntimeConfig;
 const path = require('path');
 
 module.exports = new NextI18Next({
+  localeSubpaths,
+  localePath: path.resolve('./public/static/locales'),
   // strictMode: true,
   // defaultLanguage: 'en',
   otherLanguages: ['de', 'fr'],
+  debug: true,
   browserLanguageDetection: true,
+  serverLanguageDetection: true,
+  customDetectors: ['cookie', 'localStorage'],
   detection: {
     lookupCookie: 'language',
     lookupQuerystring: 'lng',
@@ -18,8 +23,6 @@ module.exports = new NextI18Next({
       'querystring',
       'sessionStorage',
       'navigator',
-      'htmlTag',
-      'path',
       'subdomain',
     ],
     // order: ['navigator', 'localStorage', 'cookie', 'path', 'subdomain'],
@@ -27,6 +30,4 @@ module.exports = new NextI18Next({
     // excludeCacheFor: ['cimode'],
   },
   // keySeparator: false,
-  localeSubpaths,
-  localePath: path.resolve('./public/static/locales'),
 });
