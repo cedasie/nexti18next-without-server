@@ -7,6 +7,7 @@ module.exports = new NextI18Next({
   localePath: path.resolve('./public/static/locales'),
   // strictMode: true,
   // defaultLanguage: 'en',
+  fallbackLng: false,
   otherLanguages: ['de', 'fr'],
   debug: true,
   browserLanguageDetection: true,
