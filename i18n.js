@@ -11,7 +11,7 @@ module.exports = new NextI18Next({
     lookupCookie: 'language',
     order: ['cookie', 'header', 'querystring'],
     // order: ['navigator', 'localStorage', 'cookie', 'path', 'subdomain'],
-    caches: ['localStorage', 'cookie'],
+    // caches: ['localStorage', 'cookie'],
     excludeCacheFor: ['cimode'],
   },
   keySeparator: false,
