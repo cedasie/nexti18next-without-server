@@ -9,14 +9,8 @@ module.exports = new NextI18Next({
   browserLanguageDetection: true,
   detection: {
     lookupCookie: 'language',
-    order: [
-      'querystring',
-      'localStorage',
-      'cookie',
-      'navigator',
-      'path',
-      'subdomain',
-    ],
+    order: ['cookie', 'header', 'querystring'],
+    // order: ['navigator', 'localStorage', 'cookie', 'path', 'subdomain'],
     caches: ['localStorage', 'cookie'],
     excludeCacheFor: ['cimode'],
   },
