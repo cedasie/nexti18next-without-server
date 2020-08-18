@@ -16,6 +16,14 @@ const Homepage = ({ t }) => (
         >
           {t('change-locale')}
         </button>
+        <button
+          type="button"
+          onClick={() =>
+            i18n.changeLanguage(i18n.language === 'en' ? 'fr' : 'en')
+          }
+        >
+          {t('change-locale-to-fr')}
+        </button>
         <Link href="/second-page">
           <button type="button">{t('to-second-page')}</button>
         </Link>
